@@ -60,7 +60,7 @@ $ cd GildedRose-Refactoring-Kata
 $ rspec
 ```
 ## <a name="Project">Project Direction</a>
-I started this tech test by writing tests to see if the code executed everything on the requirements specification. The tests all passed so i knew that the code was working but I couldn't follow the structure because of all the if and else statements so I began rewriting the code. I separated the items into if statements and put the value adjustment into ternary operators. By doing this I distilled the code and made it easier to read by item and it's behaviour.
+I started this tech test by writing tests to see if the code executed everything on the requirements specification. All the tests passed therefore I knew that the code was working. Because of all the if and else statements I couldn't follow the structure, so I began rewriting the code. I separated the items into if statements and put the value adjustments into ternary operators. By doing this I distilled the code and made it easier to read by item and behaviour.
 
 ## <a name="Usage">Usage</a>
 irb
