@@ -60,29 +60,28 @@ $ cd GildedRose-Refactoring-Kata
 $ rspec
 ```
 ## <a name="Project">Project Direction</a>
-
-
+I started this tech test by writing tests to see if the code executed everything on the requirements specification. The tests all passed so i knew that the code was working but I couldn't follow the structure because of all the if and else statements so I began rewriting the code. I separated the items into if statements and put the value adjustment into ternary operators. By doing this I distilled the code and made it easier to read by item and it's behaviour.
 
 ## <a name="Usage">Usage</a>
 irb
 ```ruby
 $ require './lib/gilded_rose.rb'
 
- -Change Item.new three parameters to see how the values of different items change after a day
+ -'Change Item.new three parameters to see how the values of different items change after a day'
 $ items = [Item.new("item", 6, 25)]
 
- -this will return the items adjusted parameters after a simulated day
+ -'this will return the items adjusted parameters after a simulated day'
 $ GildedRose.new(items).update_quality() 
 
 
- -For indidvidual values use:
+ -'For indidvidual values use:'
 
- -For days until sell by date:
+ -'For days until sell by date:'
 $ items[0].sell_in 
 
- -For item quality value:
+ -'For item quality value:'
 $ items[0].quality
 
- -For item name:
+ -'For item name:'
 $ items[0].name
 ```
