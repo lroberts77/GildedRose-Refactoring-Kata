@@ -50,7 +50,6 @@ legendary item and as such its Quality is 80 and it never alters.
 ```shell
 $ git clone https://github.com/lroberts77/GildedRose-Refactoring-Kata
 $ cd GildedRose-Refactoring-Kata
-$ cd Ruby
 $ bundle
 ```
 
@@ -58,16 +57,15 @@ $ bundle
 ## <a name="Rspec">Rspec Tests</a>
 ```shell
 $ cd GildedRose-Refactoring-Kata
-$ cd Ruby
 $ rspec
 ```
 ## <a name="Project">Project Direction</a>
 I started this tech test by writing tests to see if the code executed everything on the requirements specification. All the tests passed therefore I knew that the code was working. Because of all the if and else statements I couldn't follow the structure, so I began rewriting the code. I separated the items into if statements and put the value adjustments into ternary operators. By doing this I distilled the code and made it easier to read by item and behaviour.
 
 ## <a name="Usage">Usage</a>
-irb
+in the terminal
 ```ruby
-$ require './lib/gilded_rose.rb'
+$ ruby irb.rb
 
  -'Change Item.new three parameters to see how the values of different items change after a day'
 $ items = [Item.new("item", 6, 25)]
