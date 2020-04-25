@@ -91,16 +91,16 @@ describe GildedRose do
 
     context "Sulfuras, Hand of Ragnaros" do
 
-      it "never decreases in quality" do
+      it "never decreases in quality from 80" do
           items = [Item.new("Sulfuras, Hand of Ragnaros", 2, 10)]
           GildedRose.new(items).update_quality()
           GildedRose.new(items).update_quality()
           GildedRose.new(items).update_quality()
-          expect(items[0].quality).to eq (10)
+          expect(items[0].quality).to eq (80)
       end
 
       it "sell_in date never decreases" do
-        items = [Item.new("Sulfuras, Hand of Ragnaros", 5, 10)]
+        items = [Item.new("Sulfuras, Hand of Ragnaros", 5, 80)]
         GildedRose.new(items).update_quality()
         GildedRose.new(items).update_quality()
         GildedRose.new(items).update_quality()

@@ -29,7 +29,7 @@ class GildedRose
 
       #Sulfuras, Hand of Ragnaros
       if item.name == "Sulfuras, Hand of Ragnaros"
-        item.quality = item.quality 
+        item.quality = 80
         item.sell_in = item.sell_in + 1
       end
 
