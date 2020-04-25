@@ -50,6 +50,7 @@ legendary item and as such its Quality is 80 and it never alters.
 ```shell
 $ git clone https://github.com/lroberts77/GildedRose-Refactoring-Kata
 $ cd GildedRose-Refactoring-Kata
+$ cd Ruby
 $ bundle
 ```
 
@@ -57,6 +58,7 @@ $ bundle
 ## <a name="Rspec">Rspec Tests</a>
 ```shell
 $ cd GildedRose-Refactoring-Kata
+$ cd Ruby
 $ rspec
 ```
 ## <a name="Project">Project Direction</a>
