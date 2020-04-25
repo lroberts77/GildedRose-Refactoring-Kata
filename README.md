@@ -46,7 +46,7 @@ Just for clarification, an item can never have its Quality increase above 50, ho
 legendary item and as such its Quality is 80 and it never alters.
 
 ## <a name="Project">Project Direction</a>
-I started this tech test by writing tests to see if the code executed everything on the requirements specification. All the tests passed therefore I knew that the code was working. Because of all the if and else statements I couldn't follow the structure, so I began rewriting the code. I separated the items into if statements and put the value adjustments into ternary operators. By doing this I distilled the code and made it easier to read by item and behaviour.
+I started this tech test by writing tests to see if the code executed everything on the requirements specification. All the tests passed therefore I knew that the code was working. Because of all the if and else statements I couldn't follow the code logic, so I began rewriting the code. I separated the items into if statements and put the value adjustments into ternary operators. By doing this I distilled the code and made it easier to read by item and behaviour.
 
 
 ## <a name="Install">Installation</a>
