@@ -1,3 +1,4 @@
+require_relative 'item'
 class GildedRose
 
   def initialize(items)
@@ -8,9 +9,7 @@ class GildedRose
     @items.each do |item|
 
       #Generic item
-      if item.name != "Aged Brie" &&
-         item.name != "Backstage passes to a TAFKAL80ETC concert" &&
-         item.name != "Sulfuras, Hand of Ragnaros"
+      if generic_item(item)
          item.sell_in > 0 ? item.quality -= 1 : item.quality -= 2 unless item.quality == 0
       end
       
@@ -38,6 +37,13 @@ class GildedRose
     end
   end
 end
+
+def generic_item(item)
+  item.name != "Aged Brie" && 
+  item.name != "Backstage passes to a TAFKAL80ETC concert" &&
+  item.name != "Sulfuras, Hand of Ragnaros"
+end
+
 # THIS IS THE ORIGINAL CODE WHICH I HAVE REFACTORED ABOVE
 #       if item.name != "Aged Brie" and item.name != "Backstage passes to a TAFKAL80ETC concert"
 #         if item.quality > 0
@@ -86,19 +92,6 @@ end
 #   end
 # end
 
-class Item
-  attr_accessor :name, :sell_in, :quality
-
-  def initialize(name, sell_in, quality)
-    @name = name
-    @sell_in = sell_in
-    @quality = quality
-  end
-
-  def to_s()
-    "#{@name}, #{@sell_in}, #{@quality}"
-  end
-end
      
 
 
