@@ -1,6 +1,9 @@
 require_relative 'item'
 class GildedRose
 
+  MAXIMUMQUALITY = 50
+  MINIMUMQUALITY = 0
+
   def initialize(items)
     @items = items
   end
@@ -10,17 +13,17 @@ class GildedRose
 
       #Generic item
       if generic_item(item)
-         item.sell_in > 0 ? item.quality -= 1 : item.quality -= 2 unless item.quality == 0
+         item.sell_in > 0 ? item.quality -= 1 : item.quality -= 2 unless item.quality == MINIMUMQUALITY
       end
       
       #Aged Brie
       if item.name == "Aged Brie"
-         item.sell_in > 0 ? item.quality += 1 : item.quality += 2 unless item.quality == 50
+         item.sell_in > 0 ? item.quality += 1 : item.quality += 2 unless item.quality == MAXIMUMQUALITY
       end
       
       # Backstage passes to a TAFKAL80ETC concert
       if item.name == "Backstage passes to a TAFKAL80ETC concert"
-         item.sell_in > 5 ? item.quality += 2 : item.quality += 3 unless item.quality == 50
+         item.sell_in > 5 ? item.quality += 2 : item.quality += 3 unless item.quality == MAXIMUMQUALITY
         if item.sell_in == 0 
            item.quality = 0
         end
