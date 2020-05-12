@@ -68,21 +68,21 @@ in the terminal
 ```ruby
 $ ruby irb.rb
 
- -'Change Item.new three parameters to see how the values of different items change after a day'
+- 'Change Item.new three parameters to see how the values of different items change after a day'
 $ items = [Item.new("item", 6, 25)]
 
- -'this will return the items adjusted parameters after a simulated day'
+- 'this will return the items adjusted parameters after a simulated day'
 $ GildedRose.new(items).update_quality() 
 
 
- -'For indidvidual values use:'
+#### For indidvidual values use:
 
- -'For days until sell by date:'
+- 'For days until sell by date:'
 $ items[0].sell_in 
 
- -'For item quality value:'
+- 'For item quality value:'
 $ items[0].quality
 
- -'For item name:'
+- 'For item name:'
 $ items[0].name
 ```
