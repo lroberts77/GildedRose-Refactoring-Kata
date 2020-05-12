@@ -75,7 +75,7 @@ $ items = [Item.new("item", 6, 25)]
 $ GildedRose.new(items).update_quality() 
 
 
-#### For indidvidual values use:
+'For indidvidual values use:'
 
 - 'For days until sell by date:'
 $ items[0].sell_in 
