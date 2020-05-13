@@ -14,7 +14,7 @@
       <img src="./assets/0.12.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2020-05-12T17:11:56+01:00">2020-05-12T17:11:56+01:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2020-05-13T17:22:46+01:00">2020-05-13T17:22:46+01:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -318,7 +318,7 @@
 
             
 
-            <code class="ruby">         item.sell_in &gt; 0 ? item.quality -= 1 : item.quality -= 2 unless item.quality == MINIMUMQUALITY</code>
+            <code class="ruby">         item.sell_in &lt;= 0 ? item.quality -= 2 : item.quality -= 1 unless item.quality == MINIMUMQUALITY</code>
           </li>
         </div>
       
@@ -373,7 +373,7 @@
 
             
 
-            <code class="ruby">         item.sell_in &gt; 0 ? item.quality += 1 : item.quality += 2 unless item.quality == MAXIMUMQUALITY</code>
+            <code class="ruby">         item.sell_in &lt;= 0 ? item.quality += 2 : item.quality += 1 unless item.quality == MAXIMUMQUALITY</code>
           </li>
         </div>
       
@@ -428,7 +428,7 @@
 
             
 
-            <code class="ruby">         item.sell_in &gt; 5 ? item.quality += 2 : item.quality += 3 unless item.quality == MAXIMUMQUALITY</code>
+            <code class="ruby">         item.sell_in &lt;= 5 ? item.quality += 3 : item.quality += 2 unless item.quality == MAXIMUMQUALITY</code>
           </li>
         </div>
       
