@@ -13,17 +13,17 @@ class GildedRose
 
       #Generic item
       if generic_item(item)
-         item.sell_in > 0 ? item.quality -= 1 : item.quality -= 2 unless item.quality == MINIMUMQUALITY
+         item.sell_in <= 0 ? item.quality -= 2 : item.quality -= 1 unless item.quality == MINIMUMQUALITY
       end
       
       #Aged Brie
       if item.name == "Aged Brie"
-         item.sell_in > 0 ? item.quality += 1 : item.quality += 2 unless item.quality == MAXIMUMQUALITY
+         item.sell_in <= 0 ? item.quality += 2 : item.quality += 1 unless item.quality == MAXIMUMQUALITY
       end
       
       # Backstage passes to a TAFKAL80ETC concert
       if item.name == "Backstage passes to a TAFKAL80ETC concert"
-         item.sell_in > 5 ? item.quality += 2 : item.quality += 3 unless item.quality == MAXIMUMQUALITY
+         item.sell_in <= 5 ? item.quality += 3 : item.quality += 2 unless item.quality == MAXIMUMQUALITY
         if item.sell_in == 0 
            item.quality = 0
         end
