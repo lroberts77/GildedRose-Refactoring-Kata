@@ -38,6 +38,20 @@ describe GildedRose do
         expect(items[0].quality).to eq (8)
       end
     end
+
+    context "Conjured items" do
+      it "item quality decreses twice as fast as normal items" do
+        items = [Item.new("Conjured", 10, 10)]
+        GildedRose.new(items).update_quality()
+        expect(items[0].quality).to eq (8)
+      end
+
+      it "item quality decreases twice as fast as normal items after sell_in date" do
+        items = [Item.new("Conjured", 0, 10)]
+        GildedRose.new(items).update_quality()
+        expect(items[0].quality).to eq (6)        
+      end
+    end
   
     context "Aged Brie" do
 

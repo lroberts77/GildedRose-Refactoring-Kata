@@ -3,6 +3,7 @@ class GildedRose
 
   MAXIMUMQUALITY = 50
   MINIMUMQUALITY = 0
+  MINIMUM = 0
 
   def initialize(items)
     @items = items
@@ -15,7 +16,12 @@ class GildedRose
       if generic_item(item)
          item.sell_in <= 0 ? item.quality -= 2 : item.quality -= 1 unless item.quality == MINIMUMQUALITY
       end
-      
+
+      #Conjured items
+      if item.name == "Conjured"
+         item.sell_in <= 0 ? item.quality -= 4 : item.quality -= 2 unless item.quality == MINIMUMQUALITY
+      end
+
       #Aged Brie
       if item.name == "Aged Brie"
          item.sell_in <= 0 ? item.quality += 2 : item.quality += 1 unless item.quality == MAXIMUMQUALITY
@@ -44,10 +50,12 @@ end
 def generic_item(item)
   item.name != "Aged Brie" && 
   item.name != "Backstage passes to a TAFKAL80ETC concert" &&
-  item.name != "Sulfuras, Hand of Ragnaros"
+  item.name != "Sulfuras, Hand of Ragnaros" &&
+  item.name != "Conjured"
 end
 
 # THIS IS THE ORIGINAL CODE WHICH I HAVE REFACTORED ABOVE
+
 #       if item.name != "Aged Brie" and item.name != "Backstage passes to a TAFKAL80ETC concert"
 #         if item.quality > 0
 #           if item.name != "Sulfuras, Hand of Ragnaros"
@@ -94,27 +102,3 @@ end
 #     end
 #   end
 # end
-
-     
-
-
-    
-
-
-      
-
-
-      
-
-          
-
-      
-      
-      
-      
-      
-      
-
-
-
-
