@@ -3,7 +3,7 @@ class GildedRose
 
   MAXIMUMQUALITY = 50
   MINIMUMQUALITY = 0
-  MINIMUM = 0
+  MINIMUMSELLIN = 0
 
   def initialize(items)
     @items = items
@@ -14,24 +14,24 @@ class GildedRose
 
       #Generic item
       if generic_item(item)
-         item.sell_in <= 0 ? item.quality -= 2 : item.quality -= 1 unless item.quality == MINIMUMQUALITY
+         item.sell_in <= MINIMUMSELLIN ? item.quality -= 2 : item.quality -= 1 unless item.quality == MINIMUMQUALITY
       end
 
       #Conjured items
       if item.name == "Conjured"
-         item.sell_in <= 0 ? item.quality -= 4 : item.quality -= 2 unless item.quality == MINIMUMQUALITY
+         item.sell_in <= MINIMUMSELLIN ? item.quality -= 4 : item.quality -= 2 unless item.quality == MINIMUMQUALITY
       end
 
       #Aged Brie
       if item.name == "Aged Brie"
-         item.sell_in <= 0 ? item.quality += 2 : item.quality += 1 unless item.quality == MAXIMUMQUALITY
+         item.sell_in <= MINIMUMSELLIN ? item.quality += 2 : item.quality += 1 unless item.quality == MAXIMUMQUALITY
       end
       
       # Backstage passes to a TAFKAL80ETC concert
       if item.name == "Backstage passes to a TAFKAL80ETC concert"
          item.sell_in <= 5 ? item.quality += 3 : item.quality += 2 unless item.quality == MAXIMUMQUALITY
-        if item.sell_in == 0 
-           item.quality = 0
+        if item.sell_in == MINIMUMSELLIN 
+           item.quality = MINIMUMQUALITY
         end
       end
 
