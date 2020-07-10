@@ -24,7 +24,7 @@ describe GildedRose do
         GildedRose.new(items).update_quality()
         expect(items[0].quality).to eq (9)
       end
-
+      
       it "item has quality value which is never negative" do
         items = [Item.new("item", 10, 0)]
         GildedRose.new(items).update_quality()
